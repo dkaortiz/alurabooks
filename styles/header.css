@@ -1,0 +1,59 @@
+.cabecalho__menu-hamburguer {
+    height: 24px;
+    width: 24px;
+    background-image: url("../imagens/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.cabecalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* colcoar atributos como top, button... topo esqueda direita etc, liberar e usar o absolte em baixo*/
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem {
+    padding: 1em;
+}
+
+.lista-menu { /* classe onde esta os menu*/
+    display: none; /* display none, ele some os botoes (ou lista criada como os botoes*/ 
+    position: absolute; /*permite que movimente o elemento  de acordo com outro que veio antes PAI, posicao diferente de estatic*/
+    top: 100%; /*fica 100 fora do cabecalho, onde foi definido relative*?*/
+    width: 60vw; /*vw largura da tela*/
+}
+/* proximo de uma condicao, se o container botao estiver checked, vai procurar outro que tem a classe como lista menu, e coloca display block*/
+.container__botao:checked ~ .lista-menu { 
+    display: block;
+}
+
+.lista-menu__titulo,/*Virgula, para adicionar mais classes*/
+.lista-menu__item {
+    padding: 1em; /*Espacamento interno*/
+    background-color: var(--branco);
+}
+
+.lista-menu__titulo{
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.lista-menu__link{
+    background: var(--azul-degrade);
+    background-clip: text; /*cor degrade ficar no texto*/
+    -webkit-background-clip: text; /*Para funcionar em outros navegadores, os dois webkit*/
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase; /*Transformar text ja escrito, maisculo, minusculo entre outros...*/
+}
+
+.container__botao {
+    display:none;
+}

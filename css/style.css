@@ -1,0 +1,20 @@
+@import url("../styles/header.css");
+@import url("../styles/banner.css");
+
+:root { /*raiz do css*/
+    --cor-de-fundo: #EBECEE; /*-- para criar uma variavel*/ 
+    --branco: #FFFFFF;
+    --laranja: #EB9B00;
+    --azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --fonte-principal: "Poppins"; /*fontes.google.com copiado, o codigo dentro head html*/
+}
+
+body {
+    background-color: var(--cor-de-fundo); /*var para inserir a variavel criada*/
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+
