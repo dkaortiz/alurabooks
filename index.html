@@ -4,10 +4,13 @@
         <meta charset="UTF-8"> <!-- codificacao de caracter-->
         <meta name="viewport" content="width=device-width, inicial-scale=1.0"> <!--tamanho de tela - //inicial-scale sem zoom -->
         <title>Alura-Books</title>
+        <link
+  rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/> 
+  <!--foi colocando antes do carrossel, para não voltar o padrão caso mude alguma coisa dentro do carrossel.css-->
+  <!-- plugin https://swiperjs.com para usar carrossel-->
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/reset.css">
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     </head>    
@@ -52,8 +55,54 @@
                 <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
             </section>
 
+            <section class="carrossel">
+                <h2 class="carrossel__titulo">Novos lançamentos</h2>
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide" ><img src="./imagens/ApacheKafka.svg"></div> <!--trocar o nome SLIDE1 para imagem-->
+                    <div class="swiper-slide"><img src="./imagens/Liderança.svg"></div>
+                    <div class="swiper-slide"><img src="./imagens/Javascript.svg"></div>
+                    <div class="swiper-slide"><img src="./imagens/Guia Front-end.svg"></div>
+                    <div class="swiper-slide"><img src="./imagens/Portugol.svg"></div>
+                    <div class="swiper-slide"><img src="./imagens/Acessibilidade.svg"></div>
+                    ...
+                    </div>
+                    
+                
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev">
+                        
+                    </div>
+                    <div class="swiper-button-next"></div>
+                
+                  
+                </div>
 
+            </section>
 
+            <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+            <!--Continuacao do plugin carrossel ficar sempre antes do bady dps de todos elementos, mas antes do fechamento-->
+            <script>
+                const swiper = new Swiper('.swiper', {
+                speed: 400,
+                spaceBetween: 10,
+                slidesPerView: 3, // elementos da API do swiper Documentacao
+                    pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                },
+                    navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                });
+                
+            </script>
         </body>
     
 </html>
