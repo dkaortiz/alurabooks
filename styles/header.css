@@ -27,6 +27,7 @@
 .lista-menu { /* classe onde esta os menu*/
     display: none; /* display none, ele some os botoes (ou lista criada como os botoes*/ 
     position: absolute; /*permite que movimente o elemento  de acordo com outro que veio antes PAI, posicao diferente de estatic*/
+    /* absolute que faz com que o elemento tenha o pai como referência para posicionar-se.*/
     top: 100%; /*fica 100 fora do cabecalho, onde foi definido relative*?*/
     width: 60vw; /*vw largura da tela*/
 }
