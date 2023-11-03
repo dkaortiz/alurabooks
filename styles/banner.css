@@ -33,3 +33,16 @@
     background: url(../imagens/Lupa.svg)no-repeat; /*vai tentar preencher espaco com a imagem por isso no repet*/
     background-position: 1em; /*posicao da imagem do backugroud*/
 }
+
+@media screen and (min-width: 1024px) {
+    .banner__titulo{
+        font-size: 36px;
+        
+    }
+    .banner__pesquisa{
+        width: 50%;
+    }
+    .banner__pesquisa::placeholder{
+        background-position: 7em;
+    }
+}

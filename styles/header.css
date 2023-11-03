@@ -59,3 +59,53 @@
     display:none;
 }
 
+.container__titulo{ /*Para remover titulo, quando for mediddas diferentes do Media screen, nesse caso em mobile sumir, menos de 1024px*/
+    display: none;
+}
+
+.opcoes {
+    display: none;
+}
+
+@media screen and (min-width: 1024px){ /*min quando for mobile, e max, desktop tamanho da tela*/
+    .container__titulo,
+    .container__titulo--negrito{
+        font-family: var(--fonte-secundario);
+        font-size: 30px;
+    }
+    .container__titulo {
+        font-weight: 400;
+        display: block; /*Aparecer quando entrar na regra do media screen, ou seja quando a tela for maior de 1024px*/
+    }
+
+    .container__titulo--negrito{
+        font-weight: 700;
+    }
+
+    .opcoes{/*Como esta como display flex, não preciso colcoar display block, pq ele ja coloca display flex e faz aparecer*/
+        display: flex; /*Em vez de lista (um em baixo do outro, esta nas laterais*/
+    }
+    .opcoes__item{
+        padding: 0 1em;
+        text-transform: uppercase; /*Toda letras maiusculas*/
+    }
+    .opcoes__link{
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .container__imagem--coracao, .cabecalho__menu-hamburguer{
+        display: none;
+    }
+
+    .opcoes__botao:checked ~ .lista-menu {
+        display: block;
+        width: auto;
+    }
+
+    .opcoes__botao{
+        display: none;
+    }
+
+
+}
