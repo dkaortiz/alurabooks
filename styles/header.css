@@ -106,6 +106,28 @@
     .opcoes__botao{
         display: none;
     }
-
+    
 
 }
+.container__texto{
+    display: none;
+}
+@media screen and (min-width: 1920px){
+    .container__link{
+        display: flex;
+        align-items: center; /*usar so com flex*/
+        text-decoration: none;
+        color: var(--preto);
+    }
+    .cabecalho{
+        padding: 0 10em;
+    }
+    .opcoes{
+        margin-right: auto;
+    }
+    .container__texto{
+        display: block;
+    }
+    
+}
+
